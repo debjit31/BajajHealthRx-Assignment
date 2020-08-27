@@ -2,9 +2,6 @@
 <html lang = 'en'>
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content = "width=device-width, 
-        initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>My Google Map</title>
         <style>
             #map{
@@ -15,43 +12,22 @@
     </head>
     <body>
         <style>
-            .overlay {
-                position: absolute;
-                top: 10px;
-                left: 10px;
-            }
-        
-            .overlay button {
-                font: 600 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
-                background-color: #3386c0;
-                color: #fff;
-                display: inline-block;
-                margin: 0;
-                padding: 10px 20px;
+            #lbtn {
+                background-color:#e7e7e7; 
                 border: none;
-                cursor: pointer;
-                border-radius: 3px;
-            }
-        
-            .overlay button:hover {
-                background-color: #4ea0da;
-                position: absolute;
-            }
+                color: black;
+                padding: 15px 32px;
+                margin: 10dp;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                }
         </style>
-
-        <script
-        src="https://api.tiles.mapbox.com/mapbox.js/plugins/turf/v2.0.0/turf.min.js"
-        charset="utf-8"
-        ></script>
-
         <div id = "map"></div>
-        <div class="overlay">
-            <button id="replay">Launch Rafales</button>
-        </div>
-        
-
+        <button id = 'lbtn' type = "button">Launch the rafales</button>
         <script>
-            // function to initialize the map with the required markers
+            // function to initialize the map with the required map parameters and the source and destination markers
             function initMap()
             {
                 var options = {
